@@ -8857,10 +8857,10 @@ IF LOCAL
 					ENDIF
 				ENDIF
 		ELSE
-		;씨발 존나 오래썼는데 이제 출산경험 있는 부분 다쓴거네 씨발
-		;이쪽도 만만치않게 경우의수가 많은데 씨발 진짜
-		;안되겠어요...일단 이벤트 재탕좀 많이 할게요
-		;PRINTFORMW 「」
+			;씨발 존나 오래썼는데 이제 출산경험 있는 부분 다쓴거네 씨발
+			;이쪽도 만만치않게 경우의수가 많은데 씨발 진짜
+			;안되겠어요...일단 이벤트 재탕좀 많이 할게요
+			;PRINTFORMW 「」
 			IF MARK:반발각인 == 3
 				IF TALENT:연인
 					IF CFLAG:2506 == 1
@@ -9194,8 +9194,9 @@ IF LOCAL
 				ENDIF
 			ENDIF
 		ENDIF
-			RETURN 1
-		ENDIF
+		CFLAG:2509++
+		RETURN 1
+	ENDIF
 	;その他
 	PRINTFORML
 	IF CFLAG:무자각임신 == 1&&CFLAG:2506 == 1&&!TALENT:무지
@@ -9203,7 +9204,7 @@ IF LOCAL
 		CFLAG:자각사정 = 1
 	ENDIF
 	CFLAG:5500 = 1
-	CFLAG:2509++
+	
 ENDIF
 ENDIF
 RETURN 1
