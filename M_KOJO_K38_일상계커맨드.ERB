@@ -5721,7 +5721,7 @@ IF LOCAL
 		ENDIF
 		RETURN 1
 	ENDIF
-	IF TFLAG:194
+	IF TFLAG:194 && !TCVAR:껴안고첫회
 		SELECTCASE TFLAG:194
 			CASE 0
 				IF MARK:반발각인 == 3
@@ -5895,8 +5895,8 @@ IF LOCAL
 					PRINTFORMW 코이시는 달려드는 %마스터의% 아랫배를 발로 슬며시 밀어냈다
 				ENDIF
 		ENDSELECT
-	ELSEIF TCVAR:194
-		SELECTCASE TCVAR:194
+	ELSEIF TCVAR:껴안고첫회
+		SELECTCASE TCVAR:껴안고첫회
 			CASE 1
 				;평범하게 첫경험
 				IF MARK:반발각인 == 3
